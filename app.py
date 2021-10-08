@@ -38,4 +38,5 @@ def prediction():
     return render_template('index.html', api_output=prediction)
 
 #main function
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
