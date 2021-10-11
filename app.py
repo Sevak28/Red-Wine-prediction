@@ -8,7 +8,7 @@ loadedModel = pickle.load(open('Model.pkl','rb'))
 #routes
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('red wine.html')
 
 
 @app.route('/prediction', methods=['POST'])
@@ -35,7 +35,7 @@ def prediction():
        prediction="WINE Quality is Fantastic"
     else:
        prediction="wine good is not good"
-    return render_template('index.html', api_output=prediction)
+    return render_template('red wine.html', api_output=prediction)
 
 #main function
 if __name__ == '__main__':
